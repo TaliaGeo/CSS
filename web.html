@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container {
+            background-color: #000;
+            height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header ul {
+            display: flex; 
+
+            list-style-type: none;
+        }
+
+        ul li {
+            margin: 20px; 
+           list-style:none;
+            display: inline;
+        }
+
+        ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+
+        header a img {
+            width: 40px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%;
+            margin: auto;
+        }
+
+        .content .text h2 {
+            font-size: 40px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .content .text p {
+            font-size: 14px;``
+            color: #fff;
+            margin: 20px 0;
+        }
+
+        .content .text {
+            width: 40%;
+        }
+
+        .content .main-image img {
+            width: 180px;
+        }
+
+        .content .text a {
+            background-color: #fff;
+            color: #000;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        .icons img {
+            width: 40px;
+            cursor: pointer;
+         
+        }
+
+        .icons img:hover {
+          transition: 2s;
+          transform: scale(120%);
+         
+        }
+
+        .icons {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#"> <img src="imges\logo.png" alt="#"></a>
+            
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text">
+                <h2 id="h2">Iphone 16 Pro Max</h2>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi laudantium atque ea alias nemo,
+                    harum blanditiis repudiandae dignissimos? Sunt voluptatem laborum recusandae facere possimus
+                    et fuga ab ullam cupiditate. Sed!</p>
+
+                <a href="#">All Products</a>
+
+            </div>
+
+            <div class="main-image">
+                <img src="imges\0.png" alt="" id="imgemain">
+            </div>
+
+        </div>
+
+        <div class="icons">
+            <img onclick="mobile(this.src); color('#000')" src="imges/0.png" alt="">
+            <img onclick="mobile(this.src); color('#247ec8')" src="imges/1.png" alt="">
+            <img onclick="mobile(this.src); color('#1e1e1e')" src="imges/2.png" alt="">
+            <img onclick="mobile(this.src); color('#c79b53')" src="imges/3.png" alt="">
+            <img onclick="mobile(this.src); color('#c82525')" src="imges/4.png" alt="">
+        </div>
+
+    </div>
+
+    <script>
+        const mainimge = document.getElementById('imgemain');
+        const col = document.querySelector('.container');
+        const h2 = document.getElementById("h2");
+
+       
+
+        function mobile(imageSrc) {
+            mainimge.src = imageSrc;
+        }
+
+        h2.addEventListener("mouseover", function () {
+            h2.style.color = "#bf9e32";
+        });
+        h2.addEventListener("mouseout", function () {
+            h2.style.color = "white";
+        });
+
+        function color(co) {
+            col.style.backgroundColor = co;
+        }
+
+
+    </script>
+</body>
+
+</html>
